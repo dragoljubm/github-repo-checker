@@ -1,0 +1,180 @@
+body {
+  width: 300px;
+  height: 400px;
+  margin: 0;
+}
+#container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+#root {
+  width: 100%;
+  height: 100%;
+}
+.repoPlaceholder {
+  font-weight: 500;
+  width: 92px;
+  height: 92px;
+  margin-top: 6px;
+  margin-left: 6px;
+  border-radius: 5px;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.5em;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+  --box-shadow-color: black;
+  box-shadow: 0 0 4px var(--box-shadow-color);
+  transition: all 0.1s ease-in-out;
+  user-select: none;
+}
+.alias {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 92px;
+}
+.repoPlaceholder:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+}
+.bottom-bar {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.bottom-bar > * {
+  padding: 5px;
+}
+img:hover {
+  cursor: pointer;
+}
+
+.go-to-options-img {
+  height: 64px;
+}
+
+.repoPlaceholderContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* justify-content: center; */
+  flex-wrap: wrap;
+  width: 100%;
+}
+.commitContainer {
+  margin-top: 5px;
+}
+.commit {
+  margin: 5px;
+  border: 1px solid;
+  padding: 3px;
+}
+.commit > p {
+  text-align: left;
+  margin: 0;
+  overflow-wrap: break-word;
+}
+.commit {
+  transition: all 0.1s ease-in-out;
+
+  --box-shadow-color: black;
+  box-shadow: 0 0 2px var(--box-shadow-color);
+}
+.commit:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+}
+.expandedRepo {
+  text-shadow: 0px 0px 1px #3e3d3d;
+  height: 333px;
+  width: 96%;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-align: center;
+  --box-shadow-color: black;
+  box-shadow: 0 0 4px var(--box-shadow-color);
+  overflow: auto;
+  margin-left: 6px;
+  margin-top: 6px;
+}
+.go-to-options {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  gap: 5px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  color: #f1f1f1;
+}
+::-webkit-scrollbar {
+  width: 0.8em;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #92989c;
+  border: 1px solid rgb(35, 35, 36);
+}
+.celavo-kuce-frodo {
+  visibility: hidden;
+}
+
+a.custom_button {
+  display: inline-block;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid #0e0e0e;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.32em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  color: #303c42;
+  background-color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  transition: all 0.2s;
+  user-select: none;
+}
+
+a.custom_button:active {
+  transform: translateY(2px);
+}
+
+a.custom_button:hover {
+  color: rgba(255, 255, 255, 0.9);
+  background-color: #242729;
+  cursor: pointer;
+}
+@media all and (max-width: 30em) {
+   a.custom_button {
+    display: block;
+    margin: 0.4em auto;
+  }
+}
+.notification {
+  height: 12px;
+  width: 12px;
+  border-radius: 10px;
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  border: 0.01em solid #232323;
+}

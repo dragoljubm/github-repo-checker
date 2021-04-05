@@ -1,0 +1,21 @@
+{
+  "name": "GitHub Repo Checker",
+  "description": "Keep track of new commits for up to 9 GitHub repositories",
+  "version": "0.0.1",
+  "permissions": ["storage", "notifications", "tabs"],
+  "background": {
+    "scripts": ["./bundles/background.bundle.js"],
+    "persistent": true
+  },
+  "browser_action": {
+    "default_popup": "./popup/index.html"
+  },
+  "options_page": "./options/index.html",
+  "icons": {
+    "128": "icon.png",
+    "48": "icon.png",
+    "32": "icon.png",
+    "16": "icon.png"
+  },
+  "manifest_version": 2
+}

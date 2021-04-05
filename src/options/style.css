@@ -1,0 +1,324 @@
+html {
+  padding: 0;
+  margin: 0;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh !important;
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+}
+#root {
+  width: 100vw;
+  height: 100vh;
+}
+#container {
+  width: 100%;
+  height: 100%;
+  background-color: #1a1919;
+  color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+form > * {
+  padding: 10px;
+}
+.removeForm {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  background-color: rgb(226, 26, 26);
+  text-align: center;
+  line-height: -1px;
+  display: inline-block;
+}
+.repoForm {
+  padding: 5px;
+  font-size: 0.8em;
+  border: 1px solid #2d9bf0;
+  border-radius: 2px;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.repoForm > *:not(.circle) {
+  padding: 5px;
+}
+.repoURL {
+  width: 300px;
+  background-color: #ffffffe6;
+  border: none;
+}
+.repoURL:focus {
+  outline: none;
+}
+.repoAlias {
+  width: 150px;
+  border: none;
+  background-color: #ffffffe6;
+}
+.repoAlias:focus {
+  outline: none;
+}
+.backgroundSettings {
+  display: flex;
+  flex-direction: column;
+  width: 25vw;
+}
+.backgroundSettings > * {
+  padding: 5px;
+}
+.colorSettings {
+  display: flex;
+  flex-direction: column;
+  width: 25vw;
+}
+.colorSettings > * {
+  padding: 5px;
+}
+#container > * {
+  padding: 10px;
+}
+a.custom_button:active {
+  transform: translateY(2px);
+}
+.on-save-outcome {
+  height: 21px;
+  color: palegreen;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 17px;
+}
+.preview-background {
+  align-self: center;
+  width: 120px;
+  height: 120px;
+  justify-content: center;
+  display: flex;
+  margin-top: 10px;
+  border: 1px solid rgb(150, 150, 150);
+  border-radius: 2px;
+}
+
+.preview {
+  width: 92px;
+  height: 92px;
+  background-color: red;
+  align-self: center;
+  font-weight: 500;
+  border-radius: 5px;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.5em;
+  text-shadow: 0 1px 0 rgb(0 0 0 / 40%);
+  --box-shadow-color: black;
+  box-shadow: 0 0 4px var(--box-shadow-color);
+  user-select: none;
+}
+.preview-alias {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 92px;
+}
+.preview-notification {
+  height: 12px;
+  width: 12px;
+  border-radius: 10px;
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  border: 0.01em solid #232323;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 13px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2d9bf0;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2d9bf0;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(13px);
+  -ms-transform: translateX(13px);
+  transform: translateX(13px);
+}
+.slider.round {
+  border-radius: 17px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a.custom_button {
+  display: inline-block;
+  padding: 0.15em 1em;
+  border: 0.1em solid #0e0e0e;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.32em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  color: #0e0e0e;
+  background-color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  transition: all 0.2s;
+  user-select: none;
+}
+
+.lines {
+  width: 100%;
+  height: 1px;
+  margin: 2px 0;
+  padding: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(200, 200, 200, 0) 0%,
+    rgb(200, 200, 200, 1) 5%,
+    rgb(200, 200, 200, 1) 95%,
+    rgba(200, 200, 200, 0) 100%
+  );
+}
+
+a.custom_button:hover {
+  color: #ffffff;
+  background-color: #2d9bf0;
+  cursor: pointer;
+}
+@media all and (max-width: 20em) {
+   a.custom_button {
+    display: block;
+    margin: 0.4em auto;
+  }
+}
+body {
+  background-color: #333;
+}
+.circle {
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+  position: relative;
+  display: inline-block;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  cursor: pointer;
+  z-index: 2;
+}
+.before,
+.after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 1px;
+  background-color: white;
+  border-radius: 0;
+  top: 10px;
+  -webkit-transition: 150ms ease-out;
+  -moz-transition: 150ms ease-out;
+  -o-transition: 150ms ease-out;
+  transition: 150ms ease-out;
+  z-index: 0;
+}
+.before {
+  left: 3px;
+}
+.after {
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+  left: 3px;
+}
+.circle:hover {
+  border: 2px solid #e42f2f;
+}
+.circle:hover .before {
+  background-color: #e42f2f;
+  -ms-transform: rotate(225deg);
+  -webkit-transform: rotate(225deg);
+  -moz-transform: rotate(225deg);
+  transform: rotate(225deg);
+  -webkit-transition: 300ms ease-in-out all;
+  -moz-transition: 300ms ease-in-out all;
+  -o-transition: 300ms ease-in-out all;
+  transition: 300ms ease-in-out all;
+}
+.circle:hover .after {
+  background-color: #e42f2f;
+  -ms-transform: rotate(-225deg);
+  -webkit-transform: rotate(-225deg);
+  -moz-transform: rotate(-225deg);
+  transform: rotate(-225deg);
+  -webkit-transition: 250ms ease-in all;
+  -moz-transition: 250ms ease-in all;
+  -o-transition: 250ms ease-in all;
+  transition: 250ms ease-in all;
+}
