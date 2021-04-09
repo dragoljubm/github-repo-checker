@@ -6,6 +6,8 @@ A Chromium browser extension that provides quick and easy GitHub repository comm
 Manually or periodically check up to 9 repositories and display new commits.
 Originally intended for colleagues at my university waiting on exam results.
 
+Written using React<sup>[[1]](#1)</sup> and Redux.<sup>[[2]](#2)</sup>
+
 ### Features
 
 #### Popup
@@ -47,7 +49,7 @@ The options page allows users to set repositories they want to keep track of and
 
 ### Permissions
 
-Being that the extension will be installed as an unpacked extension, your browser won't prompt you to accept the `permissions` [[1]](#1) it requires.
+Being that the extension will be installed as an unpacked extension, your browser won't prompt you to accept the `permissions`<sup>[[3]](#3)</sup> it requires.
 
     "permissions": [
       "storage",
@@ -57,15 +59,15 @@ Being that the extension will be installed as an unpacked extension, your browse
 
 These permissions allow access to their respective APIs which are used in the following way:
 
-**`storage`** [[2]](#2)
+**`storage`**<sup>[[4]](#4)</sup>
 
 - Store repository lists with accompanying commit data, background checking settings and color settings
 
-**`tabs`** [[3]](#3)
+**`tabs`**<sup>[[5]](#5)</sup>
 
 - Open commit GitHub links in a new tab when clicked
 
-**`notifications`** [[4]](#4)
+**`notifications`**<sup>[[6]](#6)</sup>
 
 - Create the new commits notification if the option is enabled by the user
 
@@ -92,11 +94,14 @@ These permissions allow access to their respective APIs which are used in the fo
   `npm run build`
 
 ## References
+<a id="1">[1]</a> [React](https://reactjs.org/): A JavaScript library for building user interfaces
 
-<a id="1">[1]</a> Chrome Developers API Reference: [Declare permissions](https://developer.chrome.com/docs/extensions/mv2/declare_permissions/)
+<a id="2">[2]</a> [Redux](https://redux.js.org/): A Predictable State Container for JS Apps
 
-<a id="2">[2]</a> Chrome Developers API Reference: [chrome.storage](https://developer.chrome.com/docs/extensions/reference/storage/)
+<a id="3">[3]</a> Chrome Developers API Reference: [Declare permissions](https://developer.chrome.com/docs/extensions/mv2/declare_permissions/)
 
-<a id="3">[3]</a> Chrome Developers API Reference: [chrome.tabs](https://developer.chrome.com/docs/extensions/reference/tabs/)
+<a id="4">[4]</a> Chrome Developers API Reference: [chrome.storage](https://developer.chrome.com/docs/extensions/reference/storage/)
 
-<a id="4">[4]</a> Chrome Developers API Reference: [chrome.notifications](https://developer.chrome.com/docs/extensions/reference/notifications/)
+<a id="5">[5]</a> Chrome Developers API Reference: [chrome.tabs](https://developer.chrome.com/docs/extensions/reference/tabs/)
+
+<a id="6">[6]</a> Chrome Developers API Reference: [chrome.notifications](https://developer.chrome.com/docs/extensions/reference/notifications/)
