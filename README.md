@@ -1,3 +1,5 @@
+ℹ️ _This was a practice project early into my SD career, don't judge the code too much_ :)
+
 ## GitHub Repository Checker
 
 ![BrowserAction](./misc/icon128.png "BrowserAction")
